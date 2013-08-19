@@ -4,6 +4,7 @@ gem 'rails', '3.2.13'
 gem 'pg', '0.12.2'
 gem 'guard-rspec'
 gem 'bootstrap-sass', '~> 2.3.2.1'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 
 # Bundle edge Rails instead:
@@ -32,7 +33,6 @@ gem 'jquery-rails'
 gem 'slim-rails'
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
