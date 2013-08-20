@@ -8,7 +8,7 @@ development:
   encoding: unicode
   database: sample_app_development
   pool: 5
-  username: arlendor
+  username: arlen
   password:
 
 # Warning: The database defined as "test" will be erased and
@@ -19,7 +19,7 @@ test:
   encoding: unicode
   database: sample_app_test
   pool: 5
-  username: arlendor
+  username: arlen
   password:
 
 production:
@@ -27,5 +27,5 @@ production:
   encoding: unicode
   database: sample_app_production
   pool: 5
-  username: arlendor
+  username: arlen
   password:
