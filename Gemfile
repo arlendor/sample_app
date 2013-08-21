@@ -5,7 +5,9 @@ gem 'pg', '0.12.2'
 gem 'guard-rspec'
 gem 'bootstrap-sass', '~> 2.3.2.1'
 gem 'bcrypt-ruby', '~> 3.0.0'
-
+gem 'faker', '1.0.1'
+gem 'will_paginate', '~> 3.0'
+gem 'bootstrap-will_paginate', '0.0.6'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
