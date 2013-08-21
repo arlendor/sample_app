@@ -46,6 +46,12 @@ describe "User Pages" do
           expect { click_link('delete') }.to change(User, :count).by(-1)
         end
         it { should_not have_link('delete', href: user_path(admin)) }
+
+        describe "should not be able to delete itself by submitting a DELETE request to the Users#destroy action" do
+          specify do
+            expect { delete user_path(admin) }.not_to change(User, :count).by(-1)
+          end
+        end
       end
     end
   end
@@ -77,10 +83,10 @@ describe "User Pages" do
 
     describe "with valid information" do
       before do
-        fill_in "Name",         with: "Example User"
-        fill_in "Email",        with: "user@example.com"
-        fill_in "Password",     with: "foobar"
-        fill_in "Confirmation", with: "foobar"
+        fill_in "Name",             with: "Example User"
+        fill_in "Email",            with: "user@example.com"
+        fill_in "Password",         with: "foobar"
+        fill_in "Confirm Password", with: "foobar"
       end
 
       it "should create a user" do
@@ -137,10 +143,11 @@ describe "User Pages" do
       let(:new_email) { "new@example.com" }
       before do
         # WHAT THE FUCK HARTL, WHAT THE ACTUAL FUCK
-        fill_in "user[name]",                  with: new_name
-        fill_in "user[email]",                 with: new_email
-        fill_in "user[password]",              with: user.password
-        fill_in "user[password_confirmation]", with: user.password
+        fill_in "Name",                  with: new_name
+        fill_in "Email",                 with: new_email
+        fill_in "Password",              with: user.password
+        fill_in "Confirm Password",      with: user.password
+        # Fuck you man.
         click_button "Save changes"
       end
 
