@@ -3,7 +3,7 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 jQuery -> 
-  $("#compose-post").keyup ->
+  $("#micropost_content").keyup ->
     remaining = 141 - $(this).val().length
 
     $("#count").text("Characters remaining: #{remaining}")
